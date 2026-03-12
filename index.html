@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parker Racquet Club - Deal Summary</title>
+
+    <!-- html2pdf library for PDF Generation -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+
+    <!-- Arenna Brand Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@1,500&family=Red+Hat+Display:wght@400;600;800&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        cream: '#FFF9F3',
+                        blueServe: '#454A60',
+                        mintHIIT: '#B7D7C0',
+                        greenBalance: '#718F85',
+                        pinkBoost: '#ECCDBC',
+                        orangeSwing: '#ED7A42',
+                        terracotta: '#B93700',
+                    },
+                    fontFamily: {
+                        sans: ['"Red Hat Display"', 'sans-serif'],
+                        serif: ['"Noto Serif"', 'serif'],
+                    },
+                    letterSpacing: {
+                        tightest: '-.025em',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #FFF9F3; /* Cream Arenna */
+            color: #454A60; /* Blue Serve */
+        }
+        .italic-emphasis {
+            font-family: 'Noto Serif', serif;
+            font-style: italic;
+            font-weight: 500;
+            letter-spacing: -0.025em; /* letter spacing -25 equivalent */
+        }
+        /* Linear abstractions of movement background hint */
+        .bg-pattern {
+            background-image: radial-gradient(#B7D7C0 1px, transparent 1px);
+            background-size: 40px 40px;
+            opacity: 0.3;
+        }
+
+        /* Styles for live-editable sections */
+        [contenteditable="true"] {
+            transition: outline 0.2s, background-color 0.2s;
+            outline: 2px solid transparent;
+        }
+        [contenteditable="true"]:hover {
+            outline: 2px dashed #B7D7C0;
+            border-radius: 6px;
+            cursor: text;
+        }
+        [contenteditable="true"]:focus {
+            outline: 2px solid #718F85;
+            background-color: rgba(255, 255, 255, 0.4);
+            border-radius: 6px;
+        }
+    </style>
+</head>
+<body class="antialiased min-h-screen relative font-sans" id="document-content">
+
+    <!-- Decorative Graphic Element (Mint HIIT & Pink Boost) -->
+    <div class="absolute top-0 right-0 w-64 h-64 bg-mintHIIT rounded-bl-full opacity-50 -z-10 mix-blend-multiply"></div>
+    <div class="absolute bottom-0 left-0 w-96 h-96 bg-pinkBoost rounded-tr-full opacity-40 -z-10 mix-blend-multiply"></div>
+
+    <div class="max-w-4xl mx-auto px-8 py-10 relative z-10">
+
+        <!-- Header -->
+        <header class="flex justify-between items-end border-b-2 border-blueServe pb-4 mb-8">
+            <div contenteditable="true">
+                <h2 class="text-sm font-semibold tracking-widest uppercase text-greenBalance mb-2">Deal Evolution</h2>
+                <h1 class="text-5xl font-extrabold text-blueServe leading-tight">
+                    Parker Racquet Club
+                </h1>
+                <p class="text-xl mt-2 text-blueServe">
+                    <span class="italic-emphasis">Where sports and connections unite.</span>
+                </p>
+            </div>
+            <!-- Studio Arenna Monogram Placeholder -->
+            <div class="w-16 h-16 bg-blueServe flex items-center justify-center rounded-lg text-cream font-bold text-2xl">
+                NN
+            </div>
+        </header>
+
+        <!-- Main Content Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+            <!-- Left Column: Vision & Summary -->
+            <div class="md:col-span-2 space-y-6" contenteditable="true">
+
+                <section>
+                    <h3 class="text-xl font-bold mb-3 flex items-center">
+                        <span class="w-8 h-1 bg-orangeSwing mr-4 block"></span>
+                        The Opportunity
+                    </h3>
+                    <p class="text-base leading-relaxed mb-3">
+                        The Parker Racquet Club deal represents a crucial step in expanding the Arenna community. We are covering four existing courts to create an all-weather, year-round facility.
+                    </p>
+                    </p>
+                </section>
+
+                <section class="bg-white rounded-2xl p-6 shadow-sm border border-pinkBoost">
+                    <h3 class="text-xl font-bold mb-4 text-blueServe">Deal Restructuring</h3>
+                    <p class="text-sm leading-relaxed mb-4">
+                        To align with local regulations and protect our capital, the deal structure has evolved from direct financing to a collaborative concierge agreement:
+                    </p>
+
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <div class="flex-shrink-0 w-5 h-5 rounded-full bg-mintHIIT flex items-center justify-center mt-1 mr-3">
+                                <svg class="w-3 h-3 text-blueServe" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-base">The Pivot</h4>
+                                <p class="text-xs mt-1">Initially, Studio Arenna planned to finance the structure directly. However, the Town of Parker required a "concierge deal." Proceeding under those terms would have removed the necessary protections on our investment.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="flex-shrink-0 w-5 h-5 rounded-full bg-mintHIIT flex items-center justify-center mt-1 mr-3">
+                                <svg class="w-3 h-3 text-blueServe" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-base">New Financing Structure</h4>
+                                <p class="text-xs mt-1">Parker Racquet Club will increase their loan facility to secure the <span class="font-semibold text-terracotta">$700,000</span> in proceeds needed to build the structure. Studio Arenna secures the space by paying the pre-accorded rent rate plus the cost of this increased mortgage (approx. <span class="font-semibold text-terracotta">$4,500 - $5,000 / month</span>).</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="flex-shrink-0 w-5 h-5 rounded-full bg-mintHIIT flex items-center justify-center mt-1 mr-3">
+                                <svg class="w-3 h-3 text-blueServe" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-base">Arenna Commitment & Reciprocity</h4>
+                                <p class="text-xs mt-1">We are prepared to take responsibility for and pay all upcoming closing fees associated with the transaction. In reciprocity, we are requesting that Parker Racquet Club covers the actual architectural fees that have already been paid to Casey.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h3 class="text-xl font-bold mb-4 flex items-center">
+                        <span class="w-8 h-1 bg-mintHIIT mr-4 block"></span>
+                        Key Terms & Financials
+                    </h3>
+                    <div class="grid grid-cols-2 gap-4 mt-4">
+                        <div class="border-l-4 border-blueServe pl-3">
+                            <p class="text-xs text-greenBalance uppercase tracking-wide font-semibold">Lease Term & Renewal</p>
+                            <p class="text-base font-bold mt-1 leading-tight">10 Years <br/><span class="text-xs font-normal">(Auto-renews if 0 missed payments)</span></p>
+                        </div>
+                        <div class="border-l-4 border-blueServe pl-3">
+                            <p class="text-xs text-greenBalance uppercase tracking-wide font-semibold">Base Rent Escalation</p>
+                            <p class="text-base font-bold mt-1 leading-tight">$15/sqft <span class="text-xs font-normal">(Y1 & Y2)</span><br/>$17/sqft <span class="text-xs font-normal">(Y3 onwards)</span></p>
+                        </div>
+                        <div class="border-l-4 border-blueServe pl-3">
+                            <p class="text-xs text-greenBalance uppercase tracking-wide font-semibold">PRC Loan Proceeds</p>
+                            <p class="text-base font-bold mt-1">$700,000</p>
+                        </div>
+                        <div class="border-l-4 border-blueServe pl-3">
+                            <p class="text-xs text-greenBalance uppercase tracking-wide font-semibold">Arenna Obligation</p>
+                            <p class="text-base font-bold mt-1">Base Rent + ~$4.5k-$5k/mo</p>
+                        </div>
+                        <div class="border-l-4 border-blueServe pl-3">
+                            <p class="text-xs text-greenBalance uppercase tracking-wide font-semibold">Closing / Arch. Fees</p>
+                            <p class="text-base font-bold mt-1">Paid by Arenna / Reciprocal</p>
+                        </div>
+                        <div class="border-l-4 border-blueServe pl-3">
+                            <p class="text-xs text-greenBalance uppercase tracking-wide font-semibold">Target Opening</p>
+                            <p class="text-base font-bold mt-1">Sept 2026</p>
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+
+            <!-- Right Column: Brand Pillars & Action -->
+            <div class="md:col-span-1">
+                <div class="bg-blueServe text-cream p-6 rounded-2xl sticky top-8" contenteditable="true">
+                    <h3 class="italic-emphasis text-xl mb-4">Unlock your potential</h3>
+
+                    <p class="text-xs font-light mb-6 leading-relaxed opacity-90">
+                        This deal is a step toward building a comprehensive wellness ecosystem. It aligns perfectly with our core principles of physical, mental, and social well-being.
+                    </p>
+
+                    <div class="space-y-4 mb-6">
+                        <div class="bg-white bg-opacity-10 p-4 rounded-lg">
+                            <h4 class="font-bold text-sm text-mintHIIT mb-2">Deal Status</h4>
+                            <p class="text-xs mb-1">- Permitting phase active</p>
+                            <p class="text-xs mb-1">- Restructured to protect investment</p>
+                            <p class="text-xs">- Awaiting arch. fee reciprocity</p>
+                        </div>
+                    </div>
+
+                    <div class="pt-4 border-t border-cream border-opacity-20">
+                        <p class="text-[10px] uppercase tracking-widest text-mintHIIT mb-2">Brand Pillars</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-[10px] border border-cream border-opacity-30 rounded-full px-2 py-1">#ArennaConnection</span>
+                            <span class="text-[10px] border border-cream border-opacity-30 rounded-full px-2 py-1">#ArennaMovement</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Footer -->
+        <footer class="mt-8 pt-4 border-t border-blueServe border-opacity-20 text-center" contenteditable="true">
+            <p class="italic-emphasis text-base text-blueServe">Here, you don't just train. Here, you connect.</p>
+        </footer>
+
+    </div>
+</body>
+</html>
